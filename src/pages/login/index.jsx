@@ -1,14 +1,18 @@
 import { useForm } from 'react-hook-form';
 import { Button } from '../../components/button';
 import { useNavigate } from 'react-router-dom';
+import { useContext } from 'react';
+import { AutenticatorContext } from '../../contexts/autenticator';
 
 
 export function LoginPage() {
 
     const { register, handleSubmit } = useForm();
     const navigate = useNavigate();
+    const { login } = useContext(AutenticatorContext);
     function onSubmit(data) {
         console.log(data);
+        login(data);
         navigate('/home');
     }
     return (

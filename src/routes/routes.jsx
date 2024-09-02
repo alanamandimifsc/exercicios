@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import { HomePage } from '../pages/home/index.jsx';
 import { LoginPage } from '../pages/login/index.jsx';
+import { PrivateRoute } from "../components/PrivateRoute/index.jsx";
 
 export const routes = createBrowserRouter([
     {
@@ -13,7 +14,7 @@ export const routes = createBrowserRouter([
 
             {
                 path: '/home',
-                element: <HomePage />
+                element: <PrivateRoute element={<HomePage />} />
             },
 
         ],
