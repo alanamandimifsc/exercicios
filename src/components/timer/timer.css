@@ -1,0 +1,21 @@
+.container--timer {
+    display: flex;
+    align-items: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 48px;
+    gap: 10px;
+}
+
+.container--timer span {
+    background-color: #282c34;
+    color: #61dafb;
+    padding: 20px;
+    border-radius: 5px;
+    width: 50px;
+    text-align: center;
+}
+
+.separator--timer {
+    color: #282c34;
+    font-weight: bold;
+}
